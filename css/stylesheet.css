@@ -9,6 +9,7 @@ h1,
 h2 {
   font-family: "Ranchers", cursive;
   text-align: center;
+  background-color: grey;
 }
 
 p {
@@ -53,6 +54,8 @@ p {
   grid-column: 2 / span 3;
   grid-row: 2;
   resize: none;
+  font-size: 50px;
+  color: #01baef;
 }
 
 .nine {
