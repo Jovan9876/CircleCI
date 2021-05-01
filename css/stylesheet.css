@@ -16,8 +16,8 @@ p {
 }
 
 .calcContainer {
-    height: 500px;
-    width: 500px;
+    height: 550px;
+    width: 550px;
     background-color: grey;
     text-align: center;
     margin-left: auto;
@@ -55,63 +55,70 @@ p {
   resize: none;
 }
 
-.one {
-  grid-column: 2;
-  grid-row: 3;
-}
-
-.two {
+.nine {
   grid-column: 3;
   grid-row: 3;
-}
-
-.three {
-  grid-column: 4;
-  grid-row: 3;
-}
-
-.four {
-  grid-column: 2;
-  grid-row: 4;
-}
-.five {
-  grid-column: 3;
-  grid-row: 4;
-}
-
-.six {
-  grid-column: 4;
-  grid-row: 4;
-}
-
-.seven {
-  grid-column: 2;
-  grid-row: 5;
 }
 
 .eight {
-  grid-column: 3;
-  grid-row: 5;
+  grid-column: 2;
+  grid-row: 3;
 }
 
-.nine {
-  grid-column: 4;
-  grid-row: 5;
-}
+.seven {
 
-.add {
   grid-column: 1;
   grid-row: 3;
 }
 
-.sub {
+.six {
+
+  grid-column: 3;
+  grid-row: 4;
+}
+.five {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.four {
   grid-column: 1;
   grid-row: 4;
 }
 
-.div {
+.three {
+  grid-column: 3;
+  grid-row: 5;
+}
+
+.two {
+  grid-column: 2;
+  grid-row: 5;
+}
+
+.one {
   grid-column: 1;
   grid-row: 5;
+}
+
+.zero {
+  grid-column: 1;
+  grid-row: 6;
+}
+
+.add {
+  grid-column: 4;
+  grid-row: 5;
+}
+
+.sub {
+  grid-column: 5;
+  grid-row: 5;
+}
+
+.div {
+  grid-column: 5;
+  grid-row: 4;
 }
 
 .decimal {
@@ -129,6 +136,20 @@ p {
   grid-row: 6;
 }
 
+.multi {
+  grid-column: 4;
+  grid-row: 4;
+}
+
+.delete {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+.ac {
+  grid-column: 5;
+  grid-row: 3;
+}
 
 
 footer {
