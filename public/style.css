@@ -1,0 +1,309 @@
+.deleteForm {
+  display: inline-block
+}
+
+
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+header.masthead {
+  position: relative;
+  background-color: #fff;
+  background: url("https://image.freepik.com/free-vector/reading-list-concept-illustration_114360-1005.jpg") no-repeat right center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+}
+
+header.masthead h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+}
+
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+}
+
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.features-icons .features-icons-item {
+  max-width: 20rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+  font-size: 4.5rem;
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon i {
+  font-size: 5rem;
+}
+
+.testimonials {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.testimonials .testimonial-item {
+  max-width: 18rem;
+}
+
+.testimonials .testimonial-item img {
+  max-width: 12rem;
+  box-shadow: 0px 5px 5px 0px #adb5bd;
+}
+
+.call-to-action {
+  position: relative;
+  background-color: #343a40;
+  background: url("./img/bg-masthead.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.call-to-action .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+footer.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.form-signin .checkbox{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.index {
+  height: 100%;
+  margin: 0px;
+  color: #01baef;
+  background-image: url("https://i.pinimg.com/originals/1d/13/ea/1d13ead1c85dc568429e9672b48875e2.jpg")
+}
+
+/* Basic Calculator CSS*/
+
+.index {
+  height: 100%;
+  margin: 0px;
+  color: #01baef;
+  background-image: url("https://i.pinimg.com/originals/1d/13/ea/1d13ead1c85dc568429e9672b48875e2.jpg")
+}
+
+.title,
+.calcHead {
+  font-family: "Ranchers", cursive;
+  text-align: center;
+}
+
+p {
+  font-family: "Gaegu", cursive;
+}
+
+.calcContainer {
+  height: 550px;
+  width: 550px;
+  background-color: grey;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+}
+
+.button {
+  background-color: #fbfbff;
+  color: #01baef;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 25px;
+  width: 85px;
+  height: 40px;
+  margin-top: 1rem;
+}
+
+.calcGrid {
+display: grid;
+grid-template-columns: repeat(6, 5em);
+grid-template-rows: repeat(6, 5em);
+column-gap: 2em;
+}
+
+.calcHead {
+grid-column: 1 / span 5;
+}
+
+.calcArea {
+grid-column: 2 / span 3;
+grid-row: 2;
+resize: none;
+font-size: 50px;
+color: #01baef;
+}
+
+.nine {
+grid-column: 3;
+grid-row: 3;
+}
+
+.eight {
+grid-column: 2;
+grid-row: 3;
+}
+
+.seven {
+
+grid-column: 1;
+grid-row: 3;
+}
+
+.six {
+
+grid-column: 3;
+grid-row: 4;
+}
+
+.five {
+grid-column: 2;
+grid-row: 4;
+}
+
+.four {
+grid-column: 1;
+grid-row: 4;
+}
+
+.three {
+grid-column: 3;
+grid-row: 5;
+}
+
+.two {
+grid-column: 2;
+grid-row: 5;
+}
+
+.one {
+grid-column: 1;
+grid-row: 5;
+}
+
+.zero {
+grid-column: 1;
+grid-row: 6;
+}
+
+.add {
+grid-column: 4;
+grid-row: 5;
+}
+
+.sub {
+grid-column: 5;
+grid-row: 5;
+}
+
+.div {
+grid-column: 5;
+grid-row: 4;
+}
+
+.decimal {
+grid-column: 2;
+grid-row: 6;
+}
+
+.equals {
+grid-column: 4;
+grid-row: 6;
+}
+
+.percent {
+grid-column: 3;
+grid-row: 6;
+}
+
+.multi {
+grid-column: 4;
+grid-row: 4;
+}
+
+.delete {
+grid-column: 4;
+grid-row: 3;
+}
+
+.ac {
+grid-column: 5;
+grid-row: 3;
+}
+
+.bottom {
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+}
