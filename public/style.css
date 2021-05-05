@@ -142,162 +142,52 @@ footer.footer {
   background-image: url("https://i.pinimg.com/originals/1d/13/ea/1d13ead1c85dc568429e9672b48875e2.jpg")
 }
 
-/* Basic Calculator CSS*/
+/* Basic Calculator CSS */
 
-.index {
+body {
   height: 100%;
   margin: 0px;
-  color: #01baef;
-  background-image: url("https://i.pinimg.com/originals/1d/13/ea/1d13ead1c85dc568429e9672b48875e2.jpg")
-}
-
-.title,
-.calcHead {
-  font-family: "Ranchers", cursive;
-  text-align: center;
-}
-
-p {
-  font-family: "Gaegu", cursive;
-}
-
-.calcContainer {
-  height: 550px;
-  width: 550px;
-  background-color: grey;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  top: 50%;
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
-}
-
-.button {
-  background-color: #fbfbff;
-  color: #01baef;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 25px;
-  width: 85px;
-  height: 40px;
-  margin-top: 1rem;
+  background-color: wheat;
 }
 
 .calcGrid {
-display: grid;
-grid-template-columns: repeat(6, 5em);
-grid-template-rows: repeat(6, 5em);
-column-gap: 2em;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(7.5em, auto) repeat(5, 6.25em);
 }
 
-.calcHead {
-grid-column: 1 / span 5;
+.calcGrid > button {
+  font-size: 2rem;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.45);
 }
 
-.calcArea {
-grid-column: 2 / span 3;
-grid-row: 2;
-resize: none;
-font-size: 50px;
-color: #01baef;
+.calcGrid > button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-.nine {
-grid-column: 3;
-grid-row: 3;
+.twoSpots {
+  grid-column: span 2;
 }
 
-.eight {
-grid-column: 2;
-grid-row: 3;
+.screen {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .60);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 0.625em;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
-.seven {
-
-grid-column: 1;
-grid-row: 3;
-}
-
-.six {
-
-grid-column: 3;
-grid-row: 4;
-}
-
-.five {
-grid-column: 2;
-grid-row: 4;
-}
-
-.four {
-grid-column: 1;
-grid-row: 4;
-}
-
-.three {
-grid-column: 3;
-grid-row: 5;
-}
-
-.two {
-grid-column: 2;
-grid-row: 5;
-}
-
-.one {
-grid-column: 1;
-grid-row: 5;
-}
-
-.zero {
-grid-column: 1;
-grid-row: 6;
-}
-
-.add {
-grid-column: 4;
-grid-row: 5;
-}
-
-.sub {
-grid-column: 5;
-grid-row: 5;
-}
-
-.div {
-grid-column: 5;
-grid-row: 4;
-}
-
-.decimal {
-grid-column: 2;
-grid-row: 6;
-}
-
-.equals {
-grid-column: 4;
-grid-row: 6;
-}
-
-.percent {
-grid-column: 3;
-grid-row: 6;
-}
-
-.multi {
-grid-column: 4;
-grid-row: 4;
-}
-
-.delete {
-grid-column: 4;
-grid-row: 3;
-}
-
-.ac {
-grid-column: 5;
-grid-row: 3;
+.screen {
+  color: white;
+  font-size: 2.5rem;
 }
 
 .bottom {
@@ -307,3 +197,5 @@ grid-row: 3;
     width: 100%;
     height: 40px;
 }
+
+/* Dark Mode CSS */

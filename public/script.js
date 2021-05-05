@@ -1,8 +1,8 @@
 function load() {
 
-    var btns = document.querySelectorAll('#calculator button');
+    var btns = document.querySelectorAll('.calcGrid button');
     var operators = ['+', '-', 'x', '÷'];
-    var inputScreen = document.querySelector('#screen');
+    var inputScreen = document.querySelector('.screen');
     var btnValue;
     var input;
 
