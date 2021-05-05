@@ -18,6 +18,8 @@ app.get("/calculator", CalcController.basic);
 
 app.get("/calculator/taxes", CalcController.tax);
 
+app.get("/calculator/advanced", CalcController.advanced);
+
 app.listen(3001, function () {
   console.log(
     "Server running. Visit: localhost:3001/calculator in your browser 🚀"

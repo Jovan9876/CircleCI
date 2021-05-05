@@ -8,6 +8,12 @@ let CalcController = {
   tax: (req, res) => {
     res.render("calculator/taxes");
   },
+
+  advanced: (req, res) => {
+    res.render("calculator/advanced");
+  },
 };
+
+
 
 module.exports = CalcController;
