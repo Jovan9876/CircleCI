@@ -20,6 +20,7 @@ function handleClick(event) {
 }
 
 function specAction(input, btnValue){
+    var inputScreen = document.querySelector('.screen');
     // Takes input actions and edits calculator screen based on them
     if(btnValue === '='){
         // if button was '=' takes string and evaluates it
@@ -49,4 +50,10 @@ function opConvert(input){
     // Converts the inputs operators where neccessary
     input = input.replace(/x/g, '*').replace(/÷/g, '/');
     return input
+}
+
+module.exports = {
+    opConvert,
+    specAction,
+    handleClick
 }
