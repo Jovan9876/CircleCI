@@ -37,6 +37,7 @@ function specAction(input, btnValue){
 
     else if(btnValue === 'DEL'){
         // if button was 'DEL' removes last character
+        innerScreen.innerHTML = input
         inputScreen.innerHTML = inputScreen.innerHTML.slice(0, -1);
     }
 
