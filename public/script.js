@@ -1,82 +1,60 @@
-function load() {
+document.body.addEventListener("click", handleClick);
+var inputScreen = document.querySelector('.screen');
 
-    var btns = document.querySelectorAll('.calcGrid button');
-    var operators = ['+', '-', 'x', '÷'];
-    var inputScreen = document.querySelector('.screen');
-    var btnValue;
-    var input;
+var operators = ['÷', 'x', '+', '-'];
+var nums = ['0', '1', '2', '3', '4', '5', '6', '8', '9'];
+var actions = ['DEL', 'AC', '='];
+var extras = ['.']
 
-    for(var i=0; i< btns.length; i++) {
-
-        var decimalAdded = false; // Flag used to avoid two decimal
-
-        btns[i].addEventListener('click', function () {
-
-            btnValue = this.innerHTML;
-            input = inputScreen.innerHTML;
-
-            switch (btnValue) {
-                case 'DEL':
-                    inputScreen.innerHTML = inputScreen.innerHTML.slice(0, -1);
-                    decimalAdded = false;
-                    break;
-                case 'AC':
-                    inputScreen.innerHTML = '';
-                    decimalAdded = false;
-                    break;
-                case '=':
-
-                    // Last char of string
-                    var lastChar = input[input.length - 1];
-
-                    // Replace x to *, + to / which could be calculated in eval
-                    input = input.replace(/x/g, '*').replace(/÷/g, '/');
-
-                    // Checking the last character of the input.
-                    // If it's an operator or a decimal, remove it
-                    // /.$/ means last char in regex
-                    if(operators.indexOf(lastChar) > -1 || lastChar == '.')
-                        input = input.replace(/.$/, '');
-
-                    if(input) {
-                        // If the argument is an expression, eval() evaluates the expression.
-                        // If the argument is one or more JavaScript statements, eval() executes the statements.
-                        inputScreen.innerHTML = eval(input);
-                    }
-                    decimalAdded = false;
-                    break;
-                case '.':
-                    if(decimalAdded === false) {
-                        inputScreen.innerHTML += btnValue;
-                        decimalAdded = true;
-                    }
-                    break;
-                case '+':
-                case '-':
-                case 'x':
-                case '÷':
-                    // Last char of string
-                    var lastChar = input[input.length - 1];
-
-                    // Only add operator if input is not empty and there is no operator at the last
-                    if(input != '' && operators.indexOf(lastChar) == -1)
-                        inputScreen.innerHTML += btnValue;
-
-                    // Allows minus if the string is empty. The first number could be under zero
-                    else if(input == '' && btnValue == '-')
-                        inputScreen.innerHTML += btnValue;
-
-                    // Allows to represent the last operation
-                    if(operators.indexOf(lastChar) > -1 && input.length > 1) {
-                        inputScreen.innerHTML = input.replace(/.$/, btnValue);
-                    }
-                    decimalAdded = false;
-                    break;
-                default:
-                    inputScreen.innerHTML += btnValue;
-                    decimalAdded = false;
-                    break;
-            }
-        });
+function handleClick(event) {
+    // Handles the clicks by the user
+    btnValue = event.target.innerHTML
+    if(actions.includes(btnValue)){
+        // calls specAction function if an action key is pressed
+        input = inputScreen.innerHTML
+        specAction(input, btnValue)
     }
+    else if(nums.includes(btnValue) || operators.includes(btnValue) || extras.includes(btnValue))
+        // Adds character to working area if it is valid
+        inputScreen.innerHTML += btnValue
+}
+
+function specAction(input, btnValue){
+    var inputScreen = document.querySelector('.screen');
+    // Takes input actions and edits calculator screen based on them
+    if(btnValue === '='){
+        // if button was '=' takes string and evaluates it
+        try{
+        input = opConvert(input)
+        console.log(eval(input))
+        inputScreen.innerHTML = eval(input)
+        }
+        catch (err) {
+            // Prints a message to screen if user inputs an invalid string
+            inputScreen.innerHTML = ('Syntax Error')
+        }
+    }
+
+    else if(btnValue === 'DEL'){
+        // if button was 'DEL' removes last character
+        innerScreen.innerHTML = input
+        inputScreen.innerHTML = inputScreen.innerHTML.slice(0, -1);
+    }
+
+    else if (btnValue === 'AC'){
+        // if button was 'AC' clears the working area
+        inputScreen.innerHTML = ''
+    }
+}
+
+function opConvert(input){
+    // Converts the inputs operators where neccessary
+    input = input.replace(/x/g, '*').replace(/÷/g, '/');
+    return input
+}
+
+module.exports = {
+    opConvert,
+    specAction,
+    handleClick
 }
