@@ -112,7 +112,7 @@ test('test DEL', () => {
   const inputScreen = document.querySelector('.screen');
   calc.specAction('589', 'DEL')
 
-  expect(inputScreen.innerText).toBe('58');
+  expect(inputScreen.innerHTML).toBe('58');
 });
 
 test('test AC', () => {
