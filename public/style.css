@@ -86,35 +86,35 @@ body {
 /* Dark Mode CSS */
 
 .dark-calc {
-  color: #871F78;
+  color: #E076D2;
   background-color: black;
   transition: 0.8s all;
 }
 
 .hover > button:hover {
-  background-color: rgba(135, 31, 120, 0.4);
+  background-color: rgba(224, 118, 210, 0.4);
   transition: 0.8s all;
 }
 
 .calcContain > button{
   font-size: 2rem;
-  border: 1px solid #871F78;
+  border: 1px solid #E076D2;
   background-color: rgba(0, 0, 0, 1);
-  color: #871F78;
+  color: #E076D2;
   transition: 0.8s all;
 }
 
 .dark-screen {
   color: black;
-  background-color: #871F78;
+  background-color: #E076D2;
   font-size: 2.5rem;
   transition: 0.8s all;
 }
 
 .bg-dark { 
-  background-color: #871F78!important;
+  background-color: #E076D2!important;
 }
 
 .darkBtn {
-  background-color: #871F78;
+  background-color: #E076D2;
 }
