@@ -54,6 +54,19 @@ function opConvert(input){
     return input
 }
 
+/* Dark Mode JS */
+
+function changeTheme() {
+
+    let element = document.body;
+    let screen = document.getElementById("screen");
+    let calc = document.getElementById("calcMain");
+    element.classList.toggle("dark-calc");
+    screen.classList.toggle("dark-screen");
+    calc.classList.toggle("calcContain");
+    calc.classList.toggle("hover");
+};
+
 module.exports = {
     opConvert,
     specAction,

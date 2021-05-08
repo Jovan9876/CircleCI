@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" onload="changeTheme()">
   <h1 class="navbar-brand" href="/calculator">Calculator</h1>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8,6 +8,7 @@
       <a class="nav-item nav-link" href="/calculator">Basic Calculator</a>      
       <a class="nav-item nav-link" href="/calculator/advanced">Advanced</a>
       <a class="nav-item nav-link" href="/calculator/taxes">Taxes</a>
+      <button onclick="changeTheme()" id="dark-mode"> Dark Mode </button>
     </div>
   </div>
 </nav>
