@@ -1,4 +1,12 @@
+/* Variables */
+
+:root {
+  --darkground: black;
+  --darkcolor: #E076D2;
+}
+
 /* Fonts and sizes */
+
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -19,7 +27,7 @@ h1, h2 {
   background-color: #f8f9fa;
 }
 
-/* Basic Calculator CSS */
+/* Calculator CSS */
 
 body {
   height: 100%;
@@ -86,8 +94,8 @@ body {
 /* Dark Mode CSS */
 
 .dark-calc {
-  color: #E076D2;
-  background-color: black;
+  color: var(--darkcolor);
+  background-color: var(--darkground);
   transition: 0.8s all;
 }
 
@@ -98,23 +106,23 @@ body {
 
 .calcContain > button{
   font-size: 2rem;
-  border: 1px solid #E076D2;
+  border: 1px solid var(--darkcolor);
   background-color: rgba(0, 0, 0, 1);
-  color: #E076D2;
+  color: var(--darkcolor);
   transition: 0.8s all;
 }
 
 .dark-screen {
-  color: black;
-  background-color: #E076D2;
+  color: var(--darkground);
+  background-color: var(--darkcolor);
   font-size: 2.5rem;
   transition: 0.8s all;
 }
 
 .bg-dark { 
-  background-color: #E076D2!important;
+  background-color: var(--darkcolor)!important;
 }
 
 .darkBtn {
-  background-color: #E076D2;
+  background-color: var(--darkcolor);
 }
