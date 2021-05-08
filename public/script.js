@@ -61,10 +61,15 @@ function changeTheme() {
     let element = document.body;
     let screen = document.getElementById("screen");
     let calc = document.getElementById("calcMain");
+    let nav = document.getElementById("navbar");
+    let mode = document.getElementById("dark-mode");
+    
     element.classList.toggle("dark-calc");
     screen.classList.toggle("dark-screen");
     calc.classList.toggle("calcContain");
     calc.classList.toggle("hover");
+    nav.classList.toggle("bg-dark");
+    mode.classList.toggle("darkBtn");
 };
 
 module.exports = {

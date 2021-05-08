@@ -14,6 +14,11 @@ h1, h2 {
   display: block!important;
 }
 
+.lightMode {
+  border: none;
+  background-color: #f8f9fa;
+}
+
 /* Basic Calculator CSS */
 
 body {
@@ -104,4 +109,12 @@ body {
   background-color: #871F78;
   font-size: 2.5rem;
   transition: 0.8s all;
+}
+
+.bg-dark { 
+  background-color: #871F78!important;
+}
+
+.darkBtn {
+  background-color: #871F78;
 }
