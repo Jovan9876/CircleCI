@@ -1,8 +1,8 @@
 document.body.addEventListener("click", handleClick);
 var inputScreen = document.querySelector('.screen');
 
-var operators = ['÷', 'x', '+', '-'];
-var nums = ['0', '1', '2', '3', '4', '5', '6', '8', '9'];
+var operators = ['÷', 'x', '+', '-', '(', ')', '^', '%'];
+var nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var actions = ['DEL', 'AC', '='];
 var extras = ['.']
 
@@ -50,7 +50,7 @@ function specAction(input, btnValue){
 
 function opConvert(input){
     // Converts the inputs operators where neccessary
-    input = input.replace(/x/g, '*').replace(/÷/g, '/');
+    input = input.replace('x', '*').replace('÷', '/').replace('^', '**');
     return input
 }
 
