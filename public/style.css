@@ -11,9 +11,13 @@ body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-h1, h2 {
+h1 {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
+}
+
+h2 { 
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* Needed for Nav-Bar */
@@ -125,4 +129,16 @@ body {
 
 .darkBtn {
   background-color: var(--darkcolor);
+}
+
+/* History CSS */
+
+.historyCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  height: auto;
+  width: auto;
 }
