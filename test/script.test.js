@@ -63,3 +63,32 @@ test('test AC', () => {
 
   expect(inputScreen.innerHTML).toBe('');
 });
+
+test('test eval brackets', () => {
+  const inputScreen = document.querySelector('.screen');
+  calc.specAction('(2+6)x2', '=')
+
+  expect(inputScreen.innerHTML).toBe('16');
+});
+
+test('replacement of r', () => {
+  expect(calc.opConvert('10r8')).toBe('10%8');
+});
+
+test('test eval remainder', () => {
+  const inputScreen = document.querySelector('.screen');
+  calc.specAction('10r8', '=')
+
+  expect(inputScreen.innerHTML).toBe('2');
+});
+
+test('replacement of ^', () => {
+  expect(calc.opConvert('10^8')).toBe('10**8');
+});
+
+test('test eval exponent', () => {
+  const inputScreen = document.querySelector('.screen');
+  calc.specAction('10^8', '=')
+
+  expect(inputScreen.innerHTML).toBe('100000000');
+});

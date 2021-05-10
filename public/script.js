@@ -50,7 +50,7 @@ function specAction(input, btnValue){
 
 function opConvert(input){
     // Converts the inputs operators where neccessary
-    input = input.replace('x', '*').replace('÷', '/').replace('^', '**');
+    input = input.replace('x', '*').replace('÷', '/');
     return input
 }
 
