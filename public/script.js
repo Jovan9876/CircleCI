@@ -16,6 +16,10 @@ function handleClick(event) {
         specAction(input, btnValue)
         History(calchistory, btnValue)
     }
+    else if(event.target.tagName === "LI"){
+        result = btnValue.substring(btnValue.indexOf('=') + 1);
+        inputScreen.innerHTML = result
+    }
     else if(nums.includes(btnValue) || operators.includes(btnValue) || extras.includes(btnValue))
         // Adds character to working area if it is valid
         inputScreen.innerHTML += btnValue
