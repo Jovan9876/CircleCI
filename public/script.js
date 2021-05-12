@@ -5,6 +5,7 @@ var operators = ['÷', 'x', '+', '-', '(', ')', '^', 'r'];
 var nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var actions = ['DEL', 'AC', '='];
 var extras = ['.']
+let calchistory = []
 
 function handleClick(event) {
     // Handles the clicks by the user
@@ -13,6 +14,7 @@ function handleClick(event) {
         // calls specAction function if an action key is pressed
         input = inputScreen.innerHTML
         specAction(input, btnValue)
+        History(calchistory, btnValue)
     }
     else if(nums.includes(btnValue) || operators.includes(btnValue) || extras.includes(btnValue))
         // Adds character to working area if it is valid
@@ -25,9 +27,12 @@ function specAction(input, btnValue){
     if(btnValue === '='){
         // if button was '=' takes string and evaluates it
         try{
-        input = opConvert(input)
-        console.log(eval(input))
-        inputScreen.innerHTML = eval(input)
+            input = opConvert(input)
+            console.log(eval(input))
+            inputScreen.innerHTML = eval(input)
+            calc = input + ' = ' + eval(input)
+            calc = calc.replace(/\n/g, ' ')
+            calchistory.push(calc)
         }
         catch (err) {
             // Prints a message to screen if user inputs an invalid string
@@ -52,6 +57,22 @@ function opConvert(input){
     // Converts the inputs operators where neccessary
     input = input.replace('x', '*').replace('÷', '/').replace('r', '%').replace('^', '**');
     return input
+}
+
+/*History Log*/
+function History(calchistory, btnValue){
+    let list = document.getElementById("theList");
+    if(btnValue === '='){
+        if (calchistory.length > 2) {
+            calchistory.shift()
+        }
+        $('#theList').empty();
+        calchistory.forEach((calc)=>{
+            let li = document.createElement("li");
+            li.innerText = calc;
+            list.appendChild(li);
+        })
+    }
 }
 
 /* Dark Mode JS */
