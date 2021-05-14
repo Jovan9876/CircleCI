@@ -28,6 +28,7 @@ function handleClick(event) {
     else if(btnValue === 'Dark Theme' || btnValue === 'Light Theme'){
         changeTheme(btnValue);
     };
+
 };
 
 
