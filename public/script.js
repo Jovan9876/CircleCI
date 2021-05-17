@@ -116,11 +116,11 @@ function changeTheme(btnValue) {
     let mode = document.getElementById("dark-mode");
     
     element.classList.toggle("dark-calc");
+    nav.classList.toggle("bg-dark");
+    mode.classList.toggle("darkBtn");
     screen.classList.toggle("dark-screen");
     calc.classList.toggle("calcContain");
     calc.classList.toggle("hover");
-    nav.classList.toggle("bg-dark");
-    mode.classList.toggle("darkBtn");
 };
 
 module.exports = {
