@@ -126,6 +126,7 @@ function changeTheme(btnValue) {
     calc.classList.toggle("hover");
 };
 
+
 /* Taxes JS */
 
 function Taxes(province){
@@ -133,22 +134,22 @@ function Taxes(province){
     var resultScreen = document.querySelector('.taxScreen');
     // Calculates the price with tax percentage
     if(province === 'Alberta' || province === 'Northwest Territories' || province === 'Nunavut' || province === 'Yukon'){
-        sales = 0.05
+        sales = 0.05;
     }
     else if(province === 'Saskatchewan'){
-        sales = 0.11
+        sales = 0.11;
     }
     else if(province === 'British Columbia' || province === 'Manitoba'){
-        sales = 0.12
+        sales = 0.12;
     }
     else if(province === 'Ontario'){
-        sales = 0.13
+        sales = 0.13;
     }
     else if(province === 'Quebec'){
-        sales = 0.14975
+        sales = 0.14975;
     }
     else if(province === 'New Brunswick' || province === 'Newfoundland and Labrador' || province === 'Nova Scotia' || province === 'Prince Edward Island'){
-        sales = 0.15
+        sales = 0.15;
     }
     if(taxScreen.value.toString().split(".")[1].length > 2){
         resultScreen.innerHTML = "Error"
@@ -156,8 +157,7 @@ function Taxes(province){
         price = taxScreen.value;
         total = price * sales + parseFloat(price)
         resultScreen.innerHTML = total.toFixed(2)
-    }
-    
+    };
 };
 
 module.exports = {
