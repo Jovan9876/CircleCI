@@ -150,9 +150,14 @@ function Taxes(province){
     else if(province === 'New Brunswick' || province === 'Newfoundland and Labrador' || province === 'Nova Scotia' || province === 'Prince Edward Island'){
         sales = 0.15
     }
-    price = taxScreen.value;
-    total = price * sales + parseInt(price)
-    resultScreen.innerHTML = total.toFixed(2)
+    if(taxScreen.value.toString().split(".")[1].length > 2){
+        resultScreen.innerHTML = "Error"
+    } else {
+        price = taxScreen.value;
+        total = price * sales + parseFloat(price)
+        resultScreen.innerHTML = total.toFixed(2)
+    }
+    
 };
 
 module.exports = {
